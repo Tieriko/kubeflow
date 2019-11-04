@@ -13,8 +13,8 @@ app-drawer-layout.flex(narrow='{{narrowMode}}',
         figure.logo
             |!{logo}
         iron-selector.flex(selected='{{sidebarItemIndex}}')
-            a(href$='[[buildHref("/", queryParams)]]', tabindex='-1')
-                paper-item.menu-item Home
+            //a(href$='[[buildHref("/", queryParams)]]', tabindex='-1')
+            //    paper-item.menu-item Home
             template(is='dom-repeat', items='[[menuLinks]]')
                 iframe-link(href$="[[buildHref(item.link, queryParams)]]")
                     paper-item.menu-item [[item.text]]
