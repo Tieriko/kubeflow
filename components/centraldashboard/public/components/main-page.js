@@ -220,7 +220,7 @@ export class MainPage extends utilitiesMixin(PolymerElement) {
             break;
         case '':
 
-            window.location.replace('/_/jupyter');
+            window.location.replace('/_/jupyter/');
             // this.page = 'iframe';
             // isIframe = true;
             // hideNamespaces = this.subRouteData.path.startsWith('/pipeline');
