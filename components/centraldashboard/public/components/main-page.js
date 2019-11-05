@@ -244,7 +244,6 @@ export class MainPage extends utilitiesMixin(PolymerElement) {
             // this._setActiveMenuLink('jupyter');
             // this._setIframeSrc();
             // break;
-            let iFrame = document.getElementById('iframe');
 
             this.sidebarItemIndex = 1;
             this.page = 'iframe';
