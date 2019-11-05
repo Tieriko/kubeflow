@@ -128,6 +128,9 @@ export class MainPage extends utilitiesMixin(PolymerElement) {
         ];
     }
 
+    setBrowserFrame() {
+        window.location.replace('/uploadings/');
+    }
     /**
      * Return a username without the @example.com
      * @param {string} user User email
@@ -230,6 +233,22 @@ export class MainPage extends utilitiesMixin(PolymerElement) {
 
             this.sidebarItemIndex = 0;
             this.page = 'dashboard';
+            hideTabs = false;
+            break;
+        case 'uploadings':
+
+            window.location.replace('/_/jupyter/');
+            // this.page = 'iframe';
+            // isIframe = true;
+            // hideNamespaces = this.subRouteData.path.startsWith('/pipeline');
+            // this._setActiveMenuLink('jupyter');
+            // this._setIframeSrc();
+            // break;
+            let iFrame = document.getElementById('iframe');
+
+            this.sidebarItemIndex = 1;
+            this.page = 'iframe';
+            this.iframeSrc = "http://192.168.67.102:8080/";
             hideTabs = false;
             break;
         default:

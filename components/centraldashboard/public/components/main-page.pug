@@ -18,7 +18,7 @@ app-drawer-layout.flex(narrow='{{narrowMode}}',
             template(is='dom-repeat', items='[[menuLinks]]')
                 iframe-link(href$="[[buildHref(item.link, queryParams)]]")
                     paper-item.menu-item [[item.text]]
-                iframe-link()#Disabled
+                iframe-link(onclick='setBrowserFrame()')
                     paper-item.menu-item Uploadings
             //template(is='dom-if', if='[[equals(isolationMode, "multi-user")]]')
             //    aside.divider
