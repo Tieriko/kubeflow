@@ -74,10 +74,10 @@ export class MainPage extends utilitiesMixin(PolymerElement) {
                         link: '/jupyter/',
                         text: 'Notebook Servers',
                     },
-                    {
-                        link: '/uploadings/',
-                        text: 'Uploadings',
-                    },
+                    // {
+                    //     link: '/uploadings/',
+                    //     text: 'Uploadings',
+                    // },
                     // {
                     //     link: '/katib/',
                     //     text: 'Katib',
@@ -215,13 +215,13 @@ export class MainPage extends utilitiesMixin(PolymerElement) {
             this.page = 'iframe';
             isIframe = true;
             hideNamespaces = this.subRouteData.path.startsWith('/pipeline');
-            if (this.subRouteData.path === '/uploadings/') {
-                this.sidebarItemIndex = 1;
-                this.iframeSrc = "http://192.168.67.102:8080/";
-            } else {
+            // if (this.subRouteData.path === '/uploadings/') {
+            //     this.sidebarItemIndex = 1;
+            //     this.iframeSrc = "http://192.168.67.102:8080/";
+            // } else {
                 this._setActiveMenuLink(this.subRouteData.path);
                 this._setIframeSrc();
-            }
+            // }
             break;
         case 'manage-users':
             this.sidebarItemIndex = 6;
