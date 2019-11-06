@@ -18,17 +18,17 @@ app-drawer-layout.flex(narrow='{{narrowMode}}',
             template(is='dom-repeat', items='[[menuLinks]]')
                 iframe-link(href$="[[buildHref(item.link, queryParams)]]")
                     paper-item.menu-item [[item.text]]
-                iframe-link(onclick='window.open("http://192.168.67.102:8080/");')
-                    paper-item.menu-item Uploadings
+                //iframe-link(onclick='window.open("http://192.168.67.102:8080/");')
+                //    paper-item.menu-item Uploadings
             //template(is='dom-if', if='[[equals(isolationMode, "multi-user")]]')
             //    aside.divider
             //    a(href$='[[buildHref("/manage-users", queryParams)]]', tabindex='-1')
             //        paper-item.menu-item Manage Contributors
             //aside.divider
-            //a(href='https://github.com/kubeflow/kubeflow',
-            //    tabindex='-1', target="_blank")
-            //    paper-item.menu-item GitHub
-            //        iron-icon.external(icon="launch")
+            a(href='http://192.168.67.102:8080/',
+                tabindex='-1', target="_blank")
+                paper-item.menu-item Uploadings
+                    iron-icon.external(icon="launch")
             //a(href='https://www.kubeflow.org/docs/about/kubeflow/',
             //    tabindex='-1', target="_blank")
             //    paper-item.menu-item Documentation
